@@ -8,9 +8,7 @@ const ALCOHOL_METABOLISM_RATE = 0.015; // g/dL per hour
 const ALCOHOL_DENSITY = 0.789; // g/ml
 
 // Validation constants
-const MIN_WEIGHT_KG = 20; // ~44 lbs
 const MAX_WEIGHT_KG = 500; // ~1100 lbs
-const MIN_WEIGHT_LBS = 44;
 const MAX_WEIGHT_LBS = 1100;
 const MIN_ALCOHOL_PERCENTAGE = 0;
 const MAX_ALCOHOL_PERCENTAGE = 100;
@@ -25,18 +23,12 @@ function validateUserData(userData: UserData): void {
     if (userData.weight <= 0) {
       throw new Error("Weight must be a positive number");
     }
-    if (userData.weight < MIN_WEIGHT_KG) {
-      throw new Error(`Weight must be at least ${MIN_WEIGHT_KG} kg`);
-    }
     if (userData.weight > MAX_WEIGHT_KG) {
       throw new Error(`Weight must not exceed ${MAX_WEIGHT_KG} kg`);
     }
   } else if (userData.weightUnit === "lbs") {
     if (userData.weight <= 0) {
       throw new Error("Weight must be a positive number");
-    }
-    if (userData.weight < MIN_WEIGHT_LBS) {
-      throw new Error(`Weight must be at least ${MIN_WEIGHT_LBS} lbs`);
     }
     if (userData.weight > MAX_WEIGHT_LBS) {
       throw new Error(`Weight must not exceed ${MAX_WEIGHT_LBS} lbs`);
