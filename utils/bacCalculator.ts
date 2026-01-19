@@ -20,16 +20,10 @@ const MAX_VOLUME_ML = 10000; // 10 liters (reasonable max)
  */
 function validateUserData(userData: UserData): void {
   if (userData.weightUnit === "kg") {
-    if (userData.weight <= 0) {
-      throw new Error("Weight must be a positive number");
-    }
     if (userData.weight > MAX_WEIGHT_KG) {
       throw new Error(`Weight must not exceed ${MAX_WEIGHT_KG} kg`);
     }
   } else if (userData.weightUnit === "lbs") {
-    if (userData.weight <= 0) {
-      throw new Error("Weight must be a positive number");
-    }
     if (userData.weight > MAX_WEIGHT_LBS) {
       throw new Error(`Weight must not exceed ${MAX_WEIGHT_LBS} lbs`);
     }
