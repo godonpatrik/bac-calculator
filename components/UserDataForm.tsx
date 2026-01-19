@@ -79,9 +79,12 @@ export default function UserDataForm({
             id="weight"
             min="1"
             step="0.1"
-            value={userData.weight}
+            value={userData.weight || ""}
             onChange={(e) =>
-              onChange({ ...userData, weight: parseFloat(e.target.value) || 0 })
+              onChange({
+                ...userData,
+                weight: parseFloat(e.target.value),
+              })
             }
             className="flex-1 px-3 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
