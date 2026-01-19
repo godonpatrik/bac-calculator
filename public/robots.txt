@@ -1,0 +1,17 @@
+# robots.txt for BAC Tracker
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://alcoholtrackr.com/sitemap.xml
+
+# Common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
