@@ -45,26 +45,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://bac-tracker.com",
+    url: "https://alcoholtrackr.com",
     title: "BAC Tracker - Blood Alcohol Content Calculator",
     description:
       "Track your blood alcohol content in real-time. Free BAC calculator with accurate measurements based on your weight, gender, and drinks consumed.",
     siteName: "BAC Tracker",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "BAC Tracker - Blood Alcohol Content Calculator",
-    description:
-      "Track your blood alcohol content in real-time. Free BAC calculator with accurate measurements.",
-    creator: "@bactracker",
-  },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-  },
   category: "health",
   alternates: {
-    canonical: "https://bac-tracker.com",
+    canonical: "https://alcoholtrackr.com",
   },
 };
 
@@ -81,7 +70,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="theme-color" content="#1f2937" />
-        <link rel="canonical" href="https://bac-tracker.com" />
+        <link rel="canonical" href="https://alcoholtrackr.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -91,7 +80,7 @@ export default function RootLayout({
               name: "BAC Tracker",
               description:
                 "Free blood alcohol content calculator and tracker. Monitor your BAC in real-time with accurate calculations.",
-              url: "https://bac-tracker.com",
+              url: "https://alcoholtrackr.com",
               applicationCategory: "HealthApplication",
               operatingSystem: "Any",
               offers: {

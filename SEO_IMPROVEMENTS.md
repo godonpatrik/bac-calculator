@@ -86,6 +86,3 @@ verification: {
 },
 ```
 
-### Update Domain
-Replace `https://bac-tracker.com` with your actual domain throughout the files.
-
