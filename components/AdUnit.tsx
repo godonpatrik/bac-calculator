@@ -39,14 +39,31 @@ export default function AdUnit({
   const adRef = useRef<HTMLModElement>(null);
 
   useEffect(() => {
-    // Push ad to adsbygoogle array when component mounts
-    try {
-      if (typeof window !== "undefined" && window.adsbygoogle) {
-        window.adsbygoogle.push({});
+    let isSubscribed = true;
+
+    const loadAd = () => {
+      try {
+        if (!isSubscribed) return;
+
+        const adElement = adRef.current;
+        if (typeof window !== "undefined" && window.adsbygoogle && adElement) {
+          // Only push if ad hasn't been initialized
+          if (!adElement.getAttribute("data-adsbygoogle-status")) {
+            window.adsbygoogle.push({});
+          }
+        }
+      } catch (error) {
+        console.error("Ad loading error:", error);
       }
-    } catch (error) {
-      console.error("Ad loading error:", error);
-    }
+    };
+
+    // Small delay to ensure DOM is ready
+    const timeoutId = setTimeout(loadAd, 100);
+
+    return () => {
+      isSubscribed = false;
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   // If no client or slot provided, show placeholder in development
