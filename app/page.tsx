@@ -130,6 +130,10 @@ export default function Home() {
                     content, or benefits.
                   </li>
                 </ul>
+                <p>
+                  Donations are not linked to any contractual obligation or
+                  consideration.
+                </p>
                 <p>All donations are final and non-refundable.</p>
                 <p>
                   The Website operator does not provide financial, investment,
