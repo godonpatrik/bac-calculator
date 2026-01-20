@@ -19,9 +19,13 @@ export const metadata: Metadata = {
   keywords: [
     "BAC calculator",
     "blood alcohol content",
+    "blood alcohol content calculator",
+    "blood alcohol content tracker",
     "BAC tracker",
     "alcohol calculator",
     "drink tracker",
+    "alcohol tracker",
+    "alcohol trackr",
     "blood alcohol level",
     "BAC monitor",
     "alcohol consumption tracker",
@@ -89,6 +93,7 @@ export default function RootLayout({
                 priceCurrency: "USD",
               },
               featureList: [
+                "Alcohol tracker",
                 "Real-time BAC calculation",
                 "Drink tracking with timestamps",
                 "BAC over time visualization",
@@ -99,7 +104,7 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Google AdSense - Replace with your actual ad client ID */}
+        {/* Google AdSense */}
         {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
           <script
             async

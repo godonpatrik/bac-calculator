@@ -33,7 +33,7 @@ export default function Home() {
         <AdUnit
           slot={adConfig.slots.content}
           client={adConfig.client}
-          format="rectangle"
+          format="horizontal"
           className="my-6"
         />
 
