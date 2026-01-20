@@ -25,29 +25,8 @@ export default function BACTracker() {
   const [soberTime, setSoberTime] = useState<Date | null>(null);
   const [chartKey, setChartKey] = useState<number>(0);
 
-  // Load data from localStorage on mount
+  // Recalculate BAC when data changes
   useEffect(() => {
-    const savedUserData = localStorage.getItem("bacTrackerUserData");
-    const savedDrinks = localStorage.getItem("bacTrackerDrinks");
-
-    if (savedUserData) {
-      setUserData(JSON.parse(savedUserData));
-    }
-
-    if (savedDrinks) {
-      const parsedDrinks = JSON.parse(savedDrinks).map((drink: any) => ({
-        ...drink,
-        time: new Date(drink.time),
-      }));
-      setDrinks(parsedDrinks);
-    }
-  }, []);
-
-  // Save to localStorage and recalculate BAC when data changes
-  useEffect(() => {
-    localStorage.setItem("bacTrackerUserData", JSON.stringify(userData));
-    localStorage.setItem("bacTrackerDrinks", JSON.stringify(drinks));
-
     if (drinks.length > 0) {
       const newBAC = getCurrentBAC(drinks, userData);
       const newSoberTime = calculateSoberTime(drinks, userData);

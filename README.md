@@ -13,7 +13,6 @@ A Next.js application that helps users track their blood alcohol content over ti
 - **Legal Limit Indicator**: Chart shows the 0.08% legal driving limit
 - **Sober Time Estimate**: Shows when you'll be sober again
 - **Dark Theme**: Comfortable dark-ish theme for the interface
-- **Data Persistence**: Your data is saved in browser localStorage
 - **Advertisement Support**: Optional Google AdSense integration for monetization
 
 ## Technology Stack
