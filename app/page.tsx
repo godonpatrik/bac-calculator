@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import BACTracker from "@/components/BACTracker";
 import AdUnit from "@/components/AdUnit";
 import { adConfig } from "@/utils/adConfig";
 
 export default function Home() {
-  const [isTermsOpen, setIsTermsOpen] = useState(false);
   return (
     <div className="min-h-screen bg-gray-900">
       <main className="max-w-4xl mx-auto px-4 py-6">
@@ -320,61 +318,40 @@ export default function Home() {
           </section>
 
           <section className="bg-gray-800 rounded-lg p-6 mb-4">
-            <button
-              onClick={() => setIsTermsOpen(!isTermsOpen)}
-              className="w-full flex items-center justify-between text-xl font-semibold text-white mb-3 hover:text-gray-300 transition-colors"
-              aria-expanded={isTermsOpen}
-            >
-              <span>Terms and Conditions</span>
-              <svg
-                className={`w-5 h-5 transition-transform duration-200 ${
-                  isTermsOpen ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {isTermsOpen && (
-              <div className="text-gray-300 text-sm space-y-2 text-left">
-                <p>The Website is provided free of charge.</p>
-                <p>
-                  Users may optionally choose to support the Website by sending
-                  a voluntary Bitcoin (BTC) donation to the address published on
-                  the Website.
-                </p>
-                <p>Such donations:</p>
-                <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>are made entirely at the donor's own discretion,</li>
-                  <li>
-                    are not required to access or use any part of the Website,
-                  </li>
-                  <li>do not constitute payment for any product or service,</li>
-                  <li>
-                    do not grant the donor any special rights, features,
-                    content, or benefits.
-                  </li>
-                </ul>
-                <p>
-                  Donations are not linked to any contractual obligation or
-                  consideration.
-                </p>
-                <p>All donations are final and non-refundable.</p>
-                <p>
-                  The Website operator does not provide financial, investment,
-                  or tax advice and is not responsible for transaction errors,
-                  incorrect addresses, or network fees associated with Bitcoin
-                  transfers.
-                </p>
-              </div>
-            )}
+            <h2 className="text-xl font-semibold text-white mb-3">
+              Terms and Conditions
+            </h2>
+            <div className="text-gray-300 text-sm space-y-2 text-left">
+              <p>The Website is provided free of charge.</p>
+              <p>
+                Users may optionally choose to support the Website by sending a
+                voluntary Bitcoin (BTC) donation to the address published on the
+                Website.
+              </p>
+              <p>Such donations:</p>
+              <ul className="list-disc list-inside ml-4 space-y-1">
+                <li>are made entirely at the donor's own discretion,</li>
+                <li>
+                  are not required to access or use any part of the Website,
+                </li>
+                <li>do not constitute payment for any product or service,</li>
+                <li>
+                  do not grant the donor any special rights, features, content,
+                  or benefits.
+                </li>
+              </ul>
+              <p>
+                Donations are not linked to any contractual obligation or
+                consideration.
+              </p>
+              <p>All donations are final and non-refundable.</p>
+              <p>
+                The Website operator does not provide financial, investment, or
+                tax advice and is not responsible for transaction errors,
+                incorrect addresses, or network fees associated with Bitcoin
+                transfers.
+              </p>
+            </div>
           </section>
 
           {/* Bottom Ad */}
