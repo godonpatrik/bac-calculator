@@ -14,7 +14,8 @@ export const adConfig = {
     banner: process.env.NEXT_PUBLIC_AD_SLOT_BANNER,
     content: process.env.NEXT_PUBLIC_AD_SLOT_CONTENT,
     footer: process.env.NEXT_PUBLIC_AD_SLOT_FOOTER,
-    sidebar: process.env.NEXT_PUBLIC_AD_SLOT_SIDEBAR, // Optional
+    leftSide: process.env.NEXT_PUBLIC_AD_SLOT_LEFTSIDE,
+    rightSide: process.env.NEXT_PUBLIC_AD_SLOT_RIGHTSIDE,
   },
 
   // Check if ads are enabled
