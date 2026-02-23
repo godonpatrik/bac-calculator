@@ -60,25 +60,6 @@ export default function Home() {
 
           <footer className="mt-8 text-center">
             <section className="bg-gray-800 rounded-lg p-6 mb-4">
-              <h2 className="text-xl font-semibold text-white mb-3">Support</h2>
-              <div className="text-gray-300 text-sm space-y-2 text-left">
-                <p>This website is completely free to use.</p>
-                <p>
-                  If you find it useful and would like to support its
-                  development or say thank you, you may do so by sending a
-                  voluntary Bitcoin donation to the address below.
-                </p>
-                <p>
-                  <b>bc1qslnkhfxp7cr6qpcs5mrq0353vhdlfzzpdgksjm</b>
-                </p>
-                <p>
-                  Donations are entirely optional and do not provide any goods,
-                  services, or special access in return.
-                </p>
-              </div>
-            </section>
-
-            <section className="bg-gray-800 rounded-lg p-6 mb-4">
               <h2 className="text-xl font-semibold text-white mb-3">
                 About BAC Calculator
               </h2>
