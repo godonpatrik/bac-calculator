@@ -1,17 +1,22 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
+import dynamic from "next/dynamic";
 import { Drink, UserData } from "@/types";
 import UserDataForm from "./UserDataForm";
 import DrinkInput from "./DrinkInput";
 import DrinkList from "./DrinkList";
-import BACChart from "./BACChart";
 import BACDisplay from "./BACDisplay";
 import {
   calculateBAC,
   calculateSoberTime,
   getCurrentBAC,
 } from "@/utils/bacCalculator";
+
+const BACChart = dynamic(() => import("./BACChart"), {
+  ssr: false,
+  loading: () => <div className="h-64 bg-gray-700 animate-pulse rounded-lg" />,
+});
 
 export default function BACTracker() {
   const [userData, setUserData] = useState<UserData>({
@@ -95,7 +100,7 @@ export default function BACTracker() {
   }, [drinks, userData, chartKey]); // Add chartKey as dependency
 
   return (
-    <div className="space-y-4">
+    <section aria-label="BAC Calculator Tool" className="space-y-4">
       {/* User Data Input and Add Drink - Side by Side on Desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* User Data Input */}
@@ -168,6 +173,6 @@ export default function BACTracker() {
           Always drink responsibly and never drink and drive.
         </p>
       </div>
-    </div>
+    </section>
   );
 }

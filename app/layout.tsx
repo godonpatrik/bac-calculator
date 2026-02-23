@@ -13,28 +13,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BAC Tracker - Blood Alcohol Content Calculator",
+  title: "BAC Calculator — Free Blood Alcohol Content Calculator & Tracker",
   description:
-    "Free BAC calculator and tracker. Monitor your blood alcohol content in real-time with accurate calculations based on weight, gender, and drink consumption. Track your BAC levels over time and know when you'll be sober.",
+    "Free online BAC calculator. Calculate your blood alcohol content in real-time, track drinks, view BAC charts, and estimate when you'll be sober. Uses the Widmark formula. Supports metric & imperial.",
   keywords: [
     "BAC calculator",
-    "blood alcohol content",
     "blood alcohol content calculator",
-    "blood alcohol content tracker",
+    "blood alcohol calculator",
     "BAC tracker",
+    "blood alcohol content",
     "alcohol calculator",
-    "drink tracker",
-    "alcohol tracker",
-    "alcohol trackr",
+    "drink calculator",
+    "BAC estimator",
+    "how long until sober",
+    "sober time calculator",
+    "alcohol metabolism calculator",
+    "Widmark formula calculator",
     "blood alcohol level",
     "BAC monitor",
+    "alcohol tracker",
+    "drink tracker",
     "alcohol consumption tracker",
-    "drink responsibly",
+    "BAC chart",
     "sobriety calculator",
+    "drunk calculator",
+    "am I sober",
+    "when will I be sober",
+    "how drunk am I",
+    "alcohol units calculator",
+    "drink responsibly",
   ],
-  authors: [{ name: "BAC Tracker" }],
-  creator: "BAC Tracker",
-  publisher: "BAC Tracker",
+  authors: [{ name: "BAC Calculator" }],
+  creator: "BAC Calculator",
+  publisher: "BAC Calculator",
   robots: {
     index: true,
     follow: true,
@@ -50,10 +61,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://alcoholtrackr.com",
-    title: "BAC Tracker - Blood Alcohol Content Calculator",
+    title: "BAC Calculator — Free Blood Alcohol Content Calculator & Tracker",
     description:
-      "Track your blood alcohol content in real-time. Free BAC calculator with accurate measurements based on your weight, gender, and drinks consumed.",
-    siteName: "BAC Tracker",
+      "Calculate your blood alcohol content in real-time. Track drinks, estimate sobriety time, and view BAC charts. Free, private, and accurate.",
+    siteName: "BAC Calculator",
+    images: [
+      {
+        url: "https://alcoholtrackr.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "BAC Calculator - Free Blood Alcohol Content Calculator",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BAC Calculator — Free Blood Alcohol Content Calculator & Tracker",
+    description:
+      "Calculate your blood alcohol content in real-time. Track drinks, estimate sobriety time, and view BAC charts.",
+    images: ["https://alcoholtrackr.com/og-image.png"],
   },
   category: "health",
   alternates: {
@@ -75,35 +101,6 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#1f2937" />
         <link rel="canonical" href="https://alcoholtrackr.com" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebApplication",
-              name: "BAC Tracker",
-              description:
-                "Free blood alcohol content calculator and tracker. Monitor your BAC in real-time with accurate calculations.",
-              url: "https://alcoholtrackr.com",
-              applicationCategory: "HealthApplication",
-              operatingSystem: "Any",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
-              featureList: [
-                "Alcohol tracker",
-                "Real-time BAC calculation",
-                "Drink tracking with timestamps",
-                "BAC over time visualization",
-                "Sobriety time estimation",
-                "Support for metric and imperial units",
-                "Local data storage for privacy",
-              ],
-            }),
-          }}
-        />
         {/* Google AdSense */}
         {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
           <script

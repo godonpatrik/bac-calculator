@@ -1,21 +1,23 @@
-"use client";
-
 import BACTracker from "@/components/BACTracker";
 import AdUnit from "@/components/AdUnit";
 import { adConfig } from "@/utils/adConfig";
+import StructuredData from "@/components/StructuredData";
+import FAQSection from "@/components/FAQSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">
+      <StructuredData />
       <main className="max-w-4xl mx-auto px-4 py-6">
         <header className="text-center mb-6">
           <h1 className="text-3xl font-bold text-white mb-2">
-            Blood Alcohol Content (BAC) Calculator – Online Alcohol Tracker
+            BAC Calculator — Free Blood Alcohol Content Calculator & Tracker
           </h1>
           <p className="text-gray-300 text-sm max-w-2xl mx-auto">
-            Free online BAC calculator to monitor your blood alcohol content in
-            real-time. Track drinks, calculate BAC levels, and estimate when
-            you'll be sober. Supports both metric and imperial measurements.
+            Calculate your estimated blood alcohol content (BAC) in real-time.
+            Add your drinks, track your BAC level over time, and find out when
+            you&apos;ll be sober. Free, private, and based on the Widmark
+            formula.
           </p>
         </header>
 
@@ -353,6 +355,45 @@ export default function Home() {
               </p>
             </div>
           </section>
+
+          <section className="bg-gray-800 rounded-lg p-6 mb-4">
+            <h2 className="text-xl font-semibold text-white mb-3">
+              How to Use This BAC Calculator
+            </h2>
+            <div className="text-gray-300 text-sm space-y-2 text-left">
+              <ol className="list-decimal list-inside ml-4 space-y-2">
+                <li>
+                  <strong>Enter your details:</strong> Input your weight and
+                  select your gender. The calculator supports both metric (kg)
+                  and imperial (lbs) units.
+                </li>
+                <li>
+                  <strong>Add your drinks:</strong> Select from predefined drink
+                  types (beer, wine, spirits) or enter a custom drink with its
+                  volume and alcohol percentage.
+                </li>
+                <li>
+                  <strong>View your BAC:</strong> Your estimated blood alcohol
+                  content updates in real-time as you add drinks.
+                </li>
+                <li>
+                  <strong>Check the chart:</strong> The BAC over time chart
+                  shows how your BAC will change, including when you&apos;ll
+                  return to 0.00%.
+                </li>
+                <li>
+                  <strong>See your sober time:</strong> The calculator estimates
+                  when your BAC will reach zero based on average metabolism
+                  rates.
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          {/* FAQ Section - Server-rendered for SEO */}
+          <div className="mb-4">
+            <FAQSection />
+          </div>
 
           {/* Bottom Ad */}
           <AdUnit
