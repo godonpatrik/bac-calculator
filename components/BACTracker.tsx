@@ -163,16 +163,6 @@ export default function BACTracker() {
           <BACChart key={`chart-${chartKey}`} data={bacData} />
         </div>
       )}
-
-      {/* Disclaimer */}
-      <div className="bg-yellow-900 border border-yellow-700 rounded-lg p-3 text-yellow-100">
-        <p className="text-xs">
-          <strong>Disclaimer:</strong> This calculator provides estimates only
-          and should not be used to determine fitness to drive or perform any
-          other task. Many factors affect blood alcohol level and metabolism.
-          Always drink responsibly and never drink and drive.
-        </p>
-      </div>
     </section>
   );
 }

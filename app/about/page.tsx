@@ -206,25 +206,6 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
-
-        <section className="bg-gray-800 rounded-lg p-6">
-          <h2 className="text-xl font-semibold text-white mb-3">
-            Important Disclaimer
-          </h2>
-          <div className="text-gray-300 text-sm space-y-2">
-            <p>
-              <strong>Remember:</strong> This calculator provides estimates
-              only. Many factors affect blood alcohol levels including
-              metabolism, food consumption, medications, and individual
-              physiology. Always drink responsibly and never drive under the
-              influence.
-            </p>
-            <p className="font-semibold text-yellow-400">
-              ⚠️ Never rely solely on this calculator to decide if you can
-              drive. The only safe choice after drinking is to not drive at all.
-            </p>
-          </div>
-        </section>
       </div>
     </div>
   );
