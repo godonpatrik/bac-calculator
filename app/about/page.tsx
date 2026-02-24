@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://alcoholtrackr.com/about",
   },
+  openGraph: {
+    title: "About — BAC Calculator",
+    description:
+      "Learn about BAC Calculator, how it works, the Widmark formula, and how to use this free blood alcohol content calculator responsibly.",
+    url: "https://alcoholtrackr.com/about",
+    siteName: "BAC Calculator",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — BAC Calculator",
+    description:
+      "Learn about BAC Calculator, how it works, the Widmark formula, and how to use this free blood alcohol content calculator responsibly.",
+  },
 };
 
 export default function AboutPage() {

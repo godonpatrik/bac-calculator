@@ -69,21 +69,12 @@ export const metadata: Metadata = {
     description:
       "Calculate your blood alcohol content in real-time. Track drinks, estimate sobriety time, and view BAC charts. Free, private, and accurate.",
     siteName: "BAC Calculator",
-    images: [
-      {
-        url: "https://alcoholtrackr.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "BAC Calculator - Free Blood Alcohol Content Calculator",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BAC Calculator — Free Blood Alcohol Content Calculator & Tracker",
     description:
       "Calculate your blood alcohol content in real-time. Track drinks, estimate sobriety time, and view BAC charts.",
-    images: ["https://alcoholtrackr.com/og-image.png"],
   },
   category: "health",
   alternates: {

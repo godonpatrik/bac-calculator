@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://alcoholtrackr.com/faq",
   },
+  openGraph: {
+    title: "FAQ — BAC Calculator | Frequently Asked Questions",
+    description:
+      "Frequently asked questions about the BAC Calculator. Learn about blood alcohol content, the Widmark formula, legal BAC limits, standard drinks, and more.",
+    url: "https://alcoholtrackr.com/faq",
+    siteName: "BAC Calculator",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ — BAC Calculator | Frequently Asked Questions",
+    description:
+      "Frequently asked questions about the BAC Calculator. Learn about blood alcohol content, the Widmark formula, legal BAC limits, standard drinks, and more.",
+  },
 };
 
 export default function FAQPage() {

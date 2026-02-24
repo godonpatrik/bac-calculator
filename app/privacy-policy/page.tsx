@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://alcoholtrackr.com/privacy-policy",
   },
+  openGraph: {
+    title: "Privacy Policy — BAC Calculator",
+    description:
+      "Privacy Policy for BAC Calculator (alcoholtrackr.com). Learn how we handle your data, cookies, and third-party services.",
+    url: "https://alcoholtrackr.com/privacy-policy",
+    siteName: "BAC Calculator",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy — BAC Calculator",
+    description:
+      "Privacy Policy for BAC Calculator (alcoholtrackr.com). Learn how we handle your data, cookies, and third-party services.",
+  },
 };
 
 export default function PrivacyPolicyPage() {

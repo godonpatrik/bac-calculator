@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://alcoholtrackr.com/contact",
   },
+  openGraph: {
+    title: "Contact Us — BAC Calculator",
+    description:
+      "Get in touch with the BAC Calculator team. Questions, feedback, or concerns about our blood alcohol content calculator.",
+    url: "https://alcoholtrackr.com/contact",
+    siteName: "BAC Calculator",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us — BAC Calculator",
+    description:
+      "Get in touch with the BAC Calculator team. Questions, feedback, or concerns about our blood alcohol content calculator.",
+  },
 };
 
 export default function ContactPage() {

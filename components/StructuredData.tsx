@@ -25,7 +25,7 @@ export default function StructuredData() {
       "Custom drink input",
       "Privacy-focused local storage",
     ],
-    screenshot: "https://alcoholtrackr.com/og-image.png",
+    screenshot: "https://alcoholtrackr.com/opengraph-image",
   };
 
   const faqSchema = {

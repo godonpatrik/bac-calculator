@@ -8,6 +8,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://alcoholtrackr.com/disclaimer",
   },
+  openGraph: {
+    title: "Disclaimer — BAC Calculator",
+    description:
+      "Important disclaimer for the BAC Calculator. This tool provides estimates only and should not be relied upon for legal or medical decisions.",
+    url: "https://alcoholtrackr.com/disclaimer",
+    siteName: "BAC Calculator",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Disclaimer — BAC Calculator",
+    description:
+      "Important disclaimer for the BAC Calculator. This tool provides estimates only and should not be relied upon for legal or medical decisions.",
+  },
 };
 
 export default function DisclaimerPage() {
