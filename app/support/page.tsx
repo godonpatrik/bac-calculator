@@ -38,7 +38,7 @@ export default function SupportPage() {
           Need Immediate Help?
         </h2>
         <div className="text-red-200 text-sm space-y-3">
-          <div className="bg-red-950/50 rounded p-4">
+          <div className="rounded p-4">
             <h3 className="font-semibold text-base mb-2">United States</h3>
             <p className="mb-2">
               <strong>SAMHSA National Helpline:</strong>{" "}
@@ -56,7 +56,7 @@ export default function SupportPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-3">
-            <div className="bg-red-950/50 rounded p-3">
+            <div className="rounded p-3">
               <h4 className="font-semibold text-sm mb-1">Canada</h4>
               <p className="text-xs">
                 <strong>Drug Rehab Services:</strong>{" "}
@@ -69,7 +69,7 @@ export default function SupportPage() {
               </p>
             </div>
 
-            <div className="bg-red-950/50 rounded p-3">
+            <div className="rounded p-3">
               <h4 className="font-semibold text-sm mb-1">United Kingdom</h4>
               <p className="text-xs">
                 <strong>Drinkline:</strong>{" "}
@@ -82,7 +82,7 @@ export default function SupportPage() {
               </p>
             </div>
 
-            <div className="bg-red-950/50 rounded p-3">
+            <div className="rounded p-3">
               <h4 className="font-semibold text-sm mb-1">Australia</h4>
               <p className="text-xs">
                 <strong>National Alcohol Helpline:</strong>{" "}
@@ -95,7 +95,7 @@ export default function SupportPage() {
               </p>
             </div>
 
-            <div className="bg-red-950/50 rounded p-3">
+            <div className="rounded p-3">
               <h4 className="font-semibold text-sm mb-1">International</h4>
               <p className="text-xs">
                 <a

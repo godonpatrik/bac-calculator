@@ -24,7 +24,7 @@ export default function Navbar() {
               href="/"
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
-              Calculator
+              Home
             </Link>
             <Link
               href="/about"
@@ -37,12 +37,6 @@ export default function Navbar() {
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
               FAQ
-            </Link>
-            <Link
-              href="/research"
-              className="text-gray-300 hover:text-white transition-colors font-medium"
-            >
-              Research
             </Link>
             <Link
               href="/support"
@@ -98,7 +92,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
             >
-              Calculator
+              Home
             </Link>
             <Link
               href="/about"
@@ -115,18 +109,11 @@ export default function Navbar() {
               FAQ
             </Link>
             <Link
-              href="/research"
-              onClick={closeMenu}
-              className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
-            >
-              Research
-            </Link>
-            <Link
               href="/support"
               onClick={closeMenu}
               className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
             >
-              Support
+              Help
             </Link>
             <Link
               href="/contact"

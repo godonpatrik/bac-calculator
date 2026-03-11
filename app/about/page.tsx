@@ -201,8 +201,7 @@ export default function AboutPage() {
               All calculations happen directly in your browser. Your personal
               data (weight, gender, drinks) is stored only in your
               browser&apos;s local storage and is{" "}
-              <strong>never sent to any server</strong>. Your privacy is our
-              priority.
+              <strong>never sent to any server</strong>.
             </p>
           </div>
         </section>

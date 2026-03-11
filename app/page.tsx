@@ -59,6 +59,36 @@ export default function Home() {
           />
 
           <footer className="mt-8 text-center">
+
+            {/* Drinking Help Section */}
+            <section className="bg-red-950/40 border border-red-800/50 rounded-lg p-6 mb-4">
+              <h2 className="text-xl font-semibold text-red-300 mb-3">
+                Struggling with Alcohol? Help Is Available
+              </h2>
+              <div className="text-gray-300 text-sm space-y-2 text-left">
+                <p>
+                  If you find yourself drinking more than you intend, feeling
+                  unable to stop, or noticing that alcohol is affecting your
+                  relationships, work, or health — you are not alone. Alcohol
+                  use disorder is a medical condition, and recovery is possible
+                  with the right support.
+                </p>
+                <p>
+                  There is no shame in asking for help. Whether you&apos;re
+                  looking for crisis lines, self-assessment tools, or
+                  information about treatment options, our resources page can
+                  point you in the right direction.
+                </p>
+                <p className="pt-2">
+                  <Link
+                    href="/support"
+                    className="text-red-300 hover:text-red-200 underline font-medium"
+                  >
+                    Find alcohol support &amp; resources →
+                  </Link>
+                </p>
+              </div>
+            </section>
             <section className="bg-gray-800 rounded-lg p-6 mb-4">
               <h2 className="text-xl font-semibold text-white mb-3">
                 About BAC Calculator
@@ -122,7 +152,38 @@ export default function Home() {
                 </p>
               </div>
             </section>
-
+{/* Research Summary with link to full Research page */}
+            <section className="bg-gray-800 rounded-lg p-6 mb-4">
+              <h2 className="text-xl font-semibold text-white mb-3">
+                Scientific Research on BAC
+              </h2>
+              <div className="text-gray-300 text-sm space-y-2 text-left">
+                <p>
+                  Blood alcohol content estimation is grounded in decades of
+                  peer-reviewed science. The Widmark formula used by this
+                  calculator is derived from foundational pharmacokinetics
+                  research and has been validated across numerous studies on
+                  alcohol metabolism, absorption rates, and individual
+                  physiological variation.
+                </p>
+                <p>
+                  Factors studied include gender differences in distribution
+                  volume, the effects of food on absorption, elimination rates,
+                  and the accuracy of breath vs. blood measurements. Understanding
+                  this research helps clarify why BAC estimations are just
+                  that — estimates.
+                </p>
+                <p className="pt-2">
+                  <Link
+                    href="/research"
+                    className="text-blue-400 hover:text-blue-300 underline"
+                  >
+                    Browse the scientific research behind BAC calculation →
+                  </Link>
+                </p>
+              </div>
+            </section>
+            
             {/* FAQ Summary with link to full FAQ page */}
             <section className="bg-gray-800 rounded-lg p-6 mb-4">
               <h2 className="text-xl font-semibold text-white mb-3">

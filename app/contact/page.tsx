@@ -168,16 +168,6 @@ export default function ContactPage() {
               </Link>{" "}
               on the calculator page.
             </p>
-            <p>
-              For privacy-related questions, please review our{" "}
-              <Link
-                href="/privacy-policy"
-                className="text-blue-400 hover:text-blue-300 underline"
-              >
-                Privacy Policy
-              </Link>
-              .
-            </p>
           </div>
         </section>
       </div>
