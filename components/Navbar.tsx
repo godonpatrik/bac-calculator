@@ -39,6 +39,18 @@ export default function Navbar() {
               FAQ
             </Link>
             <Link
+              href="/research"
+              className="text-gray-300 hover:text-white transition-colors font-medium"
+            >
+              Research
+            </Link>
+            <Link
+              href="/support"
+              className="text-gray-300 hover:text-white transition-colors font-medium"
+            >
+              Help
+            </Link>
+            <Link
               href="/contact"
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
@@ -101,6 +113,20 @@ export default function Navbar() {
               className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
             >
               FAQ
+            </Link>
+            <Link
+              href="/research"
+              onClick={closeMenu}
+              className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
+            >
+              Research
+            </Link>
+            <Link
+              href="/support"
+              onClick={closeMenu}
+              className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
+            >
+              Support
             </Link>
             <Link
               href="/contact"
