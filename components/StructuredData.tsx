@@ -24,6 +24,9 @@ export default function StructuredData() {
       "Predefined drink templates",
       "Custom drink input",
       "Privacy-focused local storage",
+      "Worldwide AA office finder",
+      "24/7 alcohol crisis helpline directory",
+      "Alcohol support resources and treatment locator",
     ],
     screenshot: "https://alcoholtrackr.com/opengraph-image",
   };
@@ -139,8 +142,59 @@ export default function StructuredData() {
     ],
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "BAC Calculator - Blood Alcohol Content Tracker",
+    url: "https://alcoholtrackr.com",
+    description:
+      "Free BAC calculator with worldwide AA office finder and alcohol support resources. Calculate blood alcohol content, find AA meetings, and access 24/7 helplines.",
+    about: [
+      {
+        "@type": "Thing",
+        name: "Blood Alcohol Content",
+        description:
+          "Blood alcohol content (BAC) calculation and tracking for responsible drinking awareness.",
+      },
+      {
+        "@type": "MedicalCondition",
+        name: "Alcohol Use Disorder",
+        description:
+          "Support resources and AA meeting finder for individuals seeking help with alcohol problems.",
+      },
+    ],
+    hasPart: [
+      {
+        "@type": "WebPage",
+        name: "BAC Calculator",
+        url: "https://alcoholtrackr.com",
+        description:
+          "Calculate your blood alcohol content in real-time based on drinks consumed, weight, and gender.",
+      },
+      {
+        "@type": "MedicalWebPage",
+        name: "Alcohol Support & Resources",
+        url: "https://alcoholtrackr.com/support",
+        description:
+          "Find AA meetings worldwide, access 24/7 crisis helplines, and discover alcohol treatment resources.",
+        specialty: "Addiction Medicine",
+      },
+      {
+        "@type": "FAQPage",
+        name: "BAC Calculator FAQ",
+        url: "https://alcoholtrackr.com/faq",
+        description:
+          "Frequently asked questions about blood alcohol content calculation and the Widmark formula.",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}

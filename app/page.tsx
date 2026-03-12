@@ -36,7 +36,14 @@ export default function Home() {
               Calculate your estimated blood alcohol content (BAC) in real-time.
               Add your drinks, track your BAC level over time, and find out when
               you&apos;ll be sober. Free, private, and based on the Widmark
-              formula.
+              formula. Need help? Find{" "}
+              <Link
+                href="/support"
+                className="text-blue-400 hover:text-blue-300 underline font-medium"
+              >
+                AA meetings and alcohol support resources
+              </Link>
+              .
             </p>
           </header>
 
