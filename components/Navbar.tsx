@@ -1,17 +1,36 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLearnOpen, setIsLearnOpen] = useState(false);
+  const [isMobileLearnOpen, setIsMobileLearnOpen] = useState(false);
+  const learnTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsMobileLearnOpen(false);
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsMobileLearnOpen(false);
+  };
+
+  const handleLearnMouseEnter = () => {
+    if (learnTimeoutRef.current) {
+      clearTimeout(learnTimeoutRef.current);
+      learnTimeoutRef.current = null;
+    }
+    setIsLearnOpen(true);
+  };
+
+  const handleLearnMouseLeave = () => {
+    learnTimeoutRef.current = setTimeout(() => {
+      setIsLearnOpen(false);
+    }, 500);
   };
 
   return (
@@ -26,12 +45,65 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
-              href="/about"
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+
+            {/* Learn Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleLearnMouseEnter}
+              onMouseLeave={handleLearnMouseLeave}
             >
-              About
-            </Link>
+              <button
+                className="text-gray-300 hover:text-white transition-colors font-medium flex items-center gap-1"
+                aria-expanded={isLearnOpen}
+                aria-haspopup="true"
+              >
+                Learn
+                <svg
+                  className={`w-4 h-4 transition-transform ${isLearnOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isLearnOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-gray-800 border border-gray-700 rounded-lg shadow-xl py-2 z-50">
+                  <Link
+                    href="/bac-effects"
+                    className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+                  >
+                    BAC Effects
+                    <span className="block text-xs text-gray-500">How BAC levels affect you</span>
+                  </Link>
+                  <Link
+                    href="/alcohol-metabolism"
+                    className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+                  >
+                    Alcohol Metabolism
+                    <span className="block text-xs text-gray-500">How your body processes alcohol</span>
+                  </Link>
+                  <Link
+                    href="/responsible-drinking"
+                    className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+                  >
+                    Responsible Drinking
+                    <span className="block text-xs text-gray-500">Safety tips &amp; harm reduction</span>
+                  </Link>
+                  <Link
+                    href="/research"
+                    className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+                  >
+                    Research
+                    <span className="block text-xs text-gray-500">Scientific papers &amp; sources</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               href="/faq"
               className="text-gray-300 hover:text-white transition-colors font-medium"
@@ -42,7 +114,13 @@ export default function Navbar() {
               href="/support"
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
-              Help
+              Support
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-300 hover:text-white transition-colors font-medium"
+            >
+              About
             </Link>
             <Link
               href="/contact"
@@ -94,13 +172,59 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
-              href="/about"
-              onClick={closeMenu}
-              className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
+
+            {/* Mobile Learn Accordion */}
+            <button
+              onClick={() => setIsMobileLearnOpen(!isMobileLearnOpen)}
+              className="w-full text-left text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium flex items-center justify-between"
+              aria-expanded={isMobileLearnOpen}
             >
-              About
-            </Link>
+              Learn
+              <svg
+                className={`w-4 h-4 transition-transform ${isMobileLearnOpen ? "rotate-180" : ""}`}
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isMobileLearnOpen && (
+              <div className="ml-4 space-y-1 border-l-2 border-gray-700 pl-2">
+                <Link
+                  href="/bac-effects"
+                  onClick={closeMenu}
+                  className="block text-gray-400 hover:text-white hover:bg-gray-700 transition-colors px-4 py-2.5 rounded text-sm"
+                >
+                  BAC Effects
+                </Link>
+                <Link
+                  href="/alcohol-metabolism"
+                  onClick={closeMenu}
+                  className="block text-gray-400 hover:text-white hover:bg-gray-700 transition-colors px-4 py-2.5 rounded text-sm"
+                >
+                  Alcohol Metabolism
+                </Link>
+                <Link
+                  href="/responsible-drinking"
+                  onClick={closeMenu}
+                  className="block text-gray-400 hover:text-white hover:bg-gray-700 transition-colors px-4 py-2.5 rounded text-sm"
+                >
+                  Responsible Drinking
+                </Link>
+                <Link
+                  href="/research"
+                  onClick={closeMenu}
+                  className="block text-gray-400 hover:text-white hover:bg-gray-700 transition-colors px-4 py-2.5 rounded text-sm"
+                >
+                  Research
+                </Link>
+              </div>
+            )}
+
             <Link
               href="/faq"
               onClick={closeMenu}
@@ -113,7 +237,14 @@ export default function Navbar() {
               onClick={closeMenu}
               className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
             >
-              Help
+              Support
+            </Link>
+            <Link
+              href="/about"
+              onClick={closeMenu}
+              className="block text-gray-300 hover:text-white hover:bg-gray-700 transition-colors px-4 py-3 rounded text-base font-medium"
+            >
+              About
             </Link>
             <Link
               href="/contact"
