@@ -30,7 +30,7 @@ export default function Home() {
         <main className="max-w-4xl w-full px-4 py-6 min-w-0">
           <header className="text-center mb-6">
             <h1 className="text-3xl font-bold text-white mb-2">
-              BAC Calculator — Free Blood Alcohol Content Calculator & Tracker
+              Blood Alcohol Calculator
             </h1>
             <p className="text-gray-300 text-sm max-w-2xl mx-auto">
               Calculate your estimated blood alcohol content (BAC) in real-time.

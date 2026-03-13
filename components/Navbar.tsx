@@ -52,7 +52,8 @@ export default function Navbar() {
               onMouseEnter={handleLearnMouseEnter}
               onMouseLeave={handleLearnMouseLeave}
             >
-              <button
+              <Link
+                href="/learn"
                 className="text-gray-300 hover:text-white transition-colors font-medium flex items-center gap-1"
                 aria-expanded={isLearnOpen}
                 aria-haspopup="true"
@@ -69,7 +70,7 @@ export default function Navbar() {
                 >
                   <path d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
               {isLearnOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-gray-800 border border-gray-700 rounded-lg shadow-xl py-2 z-50">
                   <Link
@@ -99,6 +100,13 @@ export default function Navbar() {
                   >
                     Research
                     <span className="block text-xs text-gray-500">Scientific papers &amp; sources</span>
+                  </Link>
+                  <div className="border-t border-gray-700 my-1"></div>
+                  <Link
+                    href="/learn"
+                    className="block px-4 py-2.5 text-sm text-blue-400 hover:text-blue-300 hover:bg-gray-700 transition-colors font-medium"
+                  >
+                    View All Topics →
                   </Link>
                 </div>
               )}
@@ -221,6 +229,13 @@ export default function Navbar() {
                   className="block text-gray-400 hover:text-white hover:bg-gray-700 transition-colors px-4 py-2.5 rounded text-sm"
                 >
                   Research
+                </Link>
+                <Link
+                  href="/learn"
+                  onClick={closeMenu}
+                  className="block text-blue-400 hover:text-blue-300 hover:bg-gray-700 transition-colors px-4 py-2.5 rounded text-sm font-medium"
+                >
+                  View All Topics →
                 </Link>
               </div>
             )}

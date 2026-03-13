@@ -9,6 +9,11 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-3">Learn</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/learn" className="text-gray-400 hover:text-white transition-colors">
+                  All Topics
+                </Link>
+              </li>
+              <li>
                 <Link href="/bac-effects" className="text-gray-400 hover:text-white transition-colors">
                   BAC Effects
                 </Link>

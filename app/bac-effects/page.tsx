@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "BAC Effects — How Blood Alcohol Levels Affect Your Body",
@@ -135,15 +136,21 @@ const bacLevels = [
   },
 ];
 
+const breadcrumbItems = [
+  { label: "Learn", href: "/learn" },
+  { label: "BAC Effects", href: "/bac-effects" },
+];
+
 export default function BACEffectsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <Link
-        href="/"
-        className="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block"
-      >
-        ← Back to Calculator
-      </Link>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Breadcrumbs items={breadcrumbItems} />
 
       <h1 className="text-3xl font-bold text-white mb-3">
         How BAC Levels Affect Your Body

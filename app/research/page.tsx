@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title:
@@ -178,15 +179,21 @@ function formatCitation(paper: Paper): string {
   return citation;
 }
 
+const breadcrumbItems = [
+  { label: "Learn", href: "/learn" },
+  { label: "Research", href: "/research" },
+];
+
 export default function ResearchPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <Link
-        href="/"
-        className="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block"
-      >
-        ← Back to Calculator
-      </Link>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Breadcrumbs items={breadcrumbItems} />
 
       <h1 className="text-3xl font-bold text-white mb-3">
         Scientific Research on Blood Alcohol Content

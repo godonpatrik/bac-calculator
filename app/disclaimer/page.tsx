@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Disclaimer — BAC Calculator",
@@ -24,15 +25,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbItems = [
+  { label: "Disclaimer", href: "/disclaimer" },
+];
+
 export default function DisclaimerPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <Link
-        href="/"
-        className="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block"
-      >
-        ← Back to Calculator
-      </Link>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Breadcrumbs items={breadcrumbItems} />
 
       <h1 className="text-3xl font-bold text-white mb-2">Disclaimer</h1>
       <p className="text-gray-400 text-sm mb-8">

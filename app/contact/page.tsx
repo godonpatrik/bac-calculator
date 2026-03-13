@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact Us — BAC Calculator",
@@ -24,15 +25,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbItems = [
+  { label: "Contact", href: "/contact" },
+];
+
 export default function ContactPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <Link
-        href="/"
-        className="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block"
-      >
-        ← Back to Calculator
-      </Link>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Breadcrumbs items={breadcrumbItems} />
 
       <h1 className="text-3xl font-bold text-white mb-6">Contact Us</h1>
 

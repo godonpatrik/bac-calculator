@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
 import AAOfficesFinder from "@/components/AAOfficesFinder";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+const breadcrumbItems = [
+  { label: "Support", href: "/support" },
+];
 
 export default function SupportPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <Link
-        href="/"
-        className="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block"
-      >
-        ← Back to Calculator
-      </Link>
+      <Breadcrumbs items={breadcrumbItems} />
 
       <h1 className="text-3xl font-bold text-white mb-3">
         Alcohol Support & Resources
