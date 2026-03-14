@@ -16,8 +16,8 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
   );
   const [selectedPredefined, setSelectedPredefined] = useState(0);
   const [customName, setCustomName] = useState("");
-  const [alcoholPercentage, setAlcoholPercentage] = useState(5);
-  const [volume, setVolume] = useState(355);
+  const [alcoholPercentage, setAlcoholPercentage] = useState<string>("5");
+  const [volume, setVolume] = useState<string>("355");
   const [time, setTime] = useState(format(new Date(), "yyyy-MM-dd'T'HH:mm"));
 
   // Select drinks based on unit system
@@ -38,7 +38,11 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
     const drinkData =
       drinkType === "predefined"
         ? PREDEFINED_DRINKS[selectedPredefined]
-        : { name: customName, alcoholPercentage, volume };
+        : { 
+            name: customName, 
+            alcoholPercentage: parseFloat(alcoholPercentage), 
+            volume: parseFloat(volume) 
+          };
 
     const newDrink: Drink = {
       id: `${Date.now()}-${Math.random()}`,
@@ -56,8 +60,8 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
     // Reset custom fields if custom
     if (drinkType === "custom") {
       setCustomName("");
-      setAlcoholPercentage(5);
-      setVolume(355);
+      setAlcoholPercentage("5");
+      setVolume("355");
     }
   };
 
@@ -143,11 +147,14 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
               id="alcohol-percentage"
               min="0"
               max="100"
-              step="0.1"
+              step="0.5"
               value={alcoholPercentage}
-              onChange={(e) =>
-                setAlcoholPercentage(parseFloat(e.target.value) || 0)
-              }
+              onChange={(e) => setAlcoholPercentage(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'e' || e.key === 'E' || e.key === '+' || e.key === '-') {
+                  e.preventDefault();
+                }
+              }}
               required
               className="w-full px-3 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -165,7 +172,12 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
               min="1"
               step="1"
               value={volume}
-              onChange={(e) => setVolume(parseFloat(e.target.value) || 0)}
+              onChange={(e) => setVolume(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'e' || e.key === 'E' || e.key === '+' || e.key === '-') {
+                  e.preventDefault();
+                }
+              }}
               required
               className="w-full px-3 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -194,7 +206,15 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full py-2 text-sm bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+        disabled={
+          drinkType === "custom" &&
+          (!customName.trim() || 
+           !alcoholPercentage || 
+           parseFloat(alcoholPercentage) <= 0 ||
+           !volume || 
+           parseFloat(volume) <= 0)
+        }
+        className="w-full py-2 text-sm bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:hover:bg-gray-600"
       >
         Add Drink
       </button>

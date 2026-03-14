@@ -61,7 +61,7 @@ export default function ContactPage() {
             Send Us a Message
           </h2>
           <form
-            action="https://formsubmit.co/gpatrik92@gmail.com"
+            action="https://formsubmit.co/ebc9c69299d854106c64c2876ab91cf4"
             method="POST"
             className="space-y-4"
           >
