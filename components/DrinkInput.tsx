@@ -177,7 +177,7 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
                 }
               }}
               required
-              className="w-full px-3 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="block w-full px-3 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         </div>
