@@ -10,22 +10,21 @@ export default function Home() {
       <StructuredData />
 
       {/* 3-column layout: left ad | main content | right ad */}
-      <div className="flex justify-center gap-4">
-        {/* Left Sidebar Ad — visible on large screens, sticky while scrolling */}
-        {/*<aside*/}
-        {/*  className="hidden lg:block w-[160px] shrink-0"*/}
-        {/*  aria-label="Advertisement"*/}
-        {/*>*/}
-        {/*  <div className="sticky top-4 pt-6 h-fit">*/}
-        {/*    <AdUnit*/}
-        {/*      slot={adConfig.slots.leftSide}*/}
-        {/*      client={adConfig.client}*/}
-        {/*      format="vertical"*/}
-        {/*      responsive={false}*/}
-        {/*      className="w-[160px] min-h-[600px]"*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*</aside>*/}
+      <div className="flex justify-center gap-4"> 
+        <aside
+          className="hidden lg:block w-[160px] shrink-0"
+          aria-label="Advertisement"
+        >
+          <div className="sticky top-4 pt-6 h-fit">
+            <AdUnit
+              slot={adConfig.slots.leftSide}
+              client={adConfig.client}
+              format="vertical"
+              responsive={false}
+              className="w-[160px] min-h-[600px]"
+            />
+         </div>
+        </aside>
 
         <main className="max-w-4xl w-full px-4 py-6 min-w-0">
           <header className="text-center mb-6">
@@ -48,22 +47,22 @@ export default function Home() {
           </header>
 
           {/* Top Banner Ad */}
-          <AdUnit
+          {/* <AdUnit
             slot={adConfig.slots.banner}
             client={adConfig.client}
             format="horizontal"
             className="mb-6"
-          />
+          /> */}
 
           <BACTracker />
 
           {/* Middle Content Ad */}
-          <AdUnit
+          {/* <AdUnit
             slot={adConfig.slots.content}
             client={adConfig.client}
             format="horizontal"
             className="my-6"
-          />
+          /> */}
 
           <footer className="mt-8 text-center">
 
@@ -214,30 +213,30 @@ export default function Home() {
             </section>
 
             {/* Bottom Ad */}
-            <AdUnit
+            {/* <AdUnit
               slot={adConfig.slots.footer}
               client={adConfig.client}
               format="horizontal"
               className="mt-4"
-            />
+            /> */}
           </footer>
         </main>
 
         {/* Right Sidebar Ad — visible on large screens, sticky while scrolling */}
-        {/*<aside*/}
-        {/*  className="hidden lg:block w-[160px] shrink-0"*/}
-        {/*  aria-label="Advertisement"*/}
-        {/*>*/}
-        {/*  <div className="sticky top-4 pt-6 h-fit">*/}
-        {/*    <AdUnit*/}
-        {/*      slot={adConfig.slots.rightSide}*/}
-        {/*      client={adConfig.client}*/}
-        {/*      format="vertical"*/}
-        {/*      responsive={false}*/}
-        {/*      className="w-[160px] min-h-[600px]"*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*</aside>*/}
+        <aside
+          className="hidden lg:block w-[160px] shrink-0"
+          aria-label="Advertisement"
+        >
+          <div className="sticky top-4 pt-6 h-fit">
+            <AdUnit
+              slot={adConfig.slots.rightSide}
+              client={adConfig.client}
+              format="vertical"
+              responsive={false}
+              className="w-[160px] min-h-[600px]"
+            />
+          </div>
+        </aside>
       </div>
     </div>
   );
