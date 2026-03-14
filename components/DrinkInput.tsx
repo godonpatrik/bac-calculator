@@ -147,7 +147,6 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
               id="alcohol-percentage"
               min="0"
               max="100"
-              step="0.5"
               value={alcoholPercentage}
               onChange={(e) => setAlcoholPercentage(e.target.value)}
               onKeyDown={(e) => {
@@ -170,7 +169,6 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
               type="number"
               id="volume"
               min="1"
-              step="1"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
               onKeyDown={(e) => {

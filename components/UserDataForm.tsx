@@ -16,10 +16,10 @@ export default function UserDataForm({
     let convertedWeight = userData.weight;
 
     // Convert weight if switching systems
-    if (system === "imperial" && userData.weightUnit === "kg") {
+    if (system === "imperial" && userData.unitSystem === "metric") {
       // Convert kg to lbs (1 kg = 2.20462 lbs)
       convertedWeight = Math.round(userData.weight * 2.20462 * 10) / 10;
-    } else if (system === "metric" && userData.weightUnit === "lbs") {
+    } else if (system === "metric" && userData.unitSystem === "imperial") {
       // Convert lbs to kg (1 lbs = 0.453592 kg)
       convertedWeight = Math.round(userData.weight * 0.453592 * 10) / 10;
     }
@@ -73,12 +73,11 @@ export default function UserDataForm({
         >
           Weight
         </label>
-        <div className="flex gap-2">
+        <div className="relative">
           <input
             type="number"
             id="weight"
             min="1"
-            step="0.1"
             value={userData.weight || ""}
             onChange={(e) =>
               onChange({
@@ -86,21 +85,16 @@ export default function UserDataForm({
                 weight: parseFloat(e.target.value),
               })
             }
-            className="flex-1 px-3 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onKeyDown={(e) => {
+              if (e.key === 'e' || e.key === 'E' || e.key === '+' || e.key === '-') {
+                e.preventDefault();
+              }
+            }}
+            className="w-full px-3 py-1.5 pr-12 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <select
-            value={userData.weightUnit}
-            onChange={(e) =>
-              onChange({
-                ...userData,
-                weightUnit: e.target.value as "kg" | "lbs",
-              })
-            }
-            className="px-2 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="kg">kg</option>
-            <option value="lbs">lbs</option>
-          </select>
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 pointer-events-none">
+            {userData.unitSystem === "metric" ? "kg" : "lbs"}
+          </span>
         </div>
       </div>
 
