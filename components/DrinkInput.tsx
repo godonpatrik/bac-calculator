@@ -197,7 +197,7 @@ export default function DrinkInput({ onAddDrink, userData }: DrinkInputProps) {
           value={time}
           onChange={(e) => handleSetTime(e.target.value)}
           required
-          className="block w-full px-2 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-2 py-1.5 text-sm bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
