@@ -82,6 +82,84 @@ const topics = [
       "Health effects and impairment research",
     ],
   },
+  {
+    title: "How Long Alcohol Stays in Your Body",
+    href: "/alcohol-duration",
+    icon: "⏱️",
+    description:
+      "Find out how long alcohol remains detectable in your blood, breath, urine, saliva, and hair. Learn about elimination timelines, what affects clearance speed, and how different tests detect alcohol.",
+    highlights: [
+      "Detection windows for blood, breath, urine & hair",
+      "Average BAC elimination rate explained",
+      "Factors that slow alcohol clearance",
+      "Myths about speeding up sobriety",
+    ],
+  },
+  {
+    title: "Legal BAC Limits by Country",
+    href: "/legal-bac-limits",
+    icon: "⚖️",
+    description:
+      "Compare drink-driving BAC limits across the world. Understand zero-tolerance laws, penalties for exceeding limits, and how legal thresholds differ for commercial and novice drivers.",
+    highlights: [
+      "BAC limits for 40+ countries",
+      "Zero-tolerance and reduced limits",
+      "Commercial & novice driver rules",
+      "Penalties overview by region",
+    ],
+  },
+  {
+    title: "Hangover Prevention Tips",
+    href: "/hangover-prevention",
+    icon: "💊",
+    description:
+      "Learn what actually causes hangovers, which prevention strategies are backed by science, and which popular remedies are myths. Practical tips for before, during, and after drinking.",
+    highlights: [
+      "The science behind hangovers",
+      "Evidence-based prevention strategies",
+      "Why congeners matter",
+      "Popular myths debunked",
+    ],
+  },
+  {
+    title: "Alcohol vs Body Weight",
+    href: "/alcohol-body-weight",
+    icon: "⚖️",
+    description:
+      "Understand why body weight is one of the most important factors in BAC calculation. Learn how body composition, water content, and metabolism rate interact with alcohol.",
+    highlights: [
+      "How body weight affects BAC",
+      "Body fat vs lean mass impact",
+      "Widmark factor and body water",
+      "BAC comparison tables by weight",
+    ],
+  },
+  {
+    title: "Alcohol and Sleep",
+    href: "/alcohol-and-sleep",
+    icon: "😴",
+    description:
+      "Discover how alcohol disrupts your sleep architecture, reduces REM sleep, and leads to poor sleep quality — even when it seems to help you fall asleep faster.",
+    highlights: [
+      "How alcohol changes sleep stages",
+      "REM sleep suppression explained",
+      "Sleep apnea and alcohol risk",
+      "Tips for better sleep after drinking",
+    ],
+  },
+  {
+    title: "Alcohol and Calories",
+    href: "/alcohol-and-calories",
+    icon: "🔥",
+    description:
+      "Learn how many calories are in popular alcoholic drinks, why alcohol calories are 'empty,' and how drinking affects metabolism, appetite, and weight management.",
+    highlights: [
+      "Calorie counts for common drinks",
+      "Why alcohol has 7 calories per gram",
+      "Impact on fat metabolism",
+      "Lower-calorie alternatives",
+    ],
+  },
 ];
 
 export default function LearnPage() {

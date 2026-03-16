@@ -269,16 +269,16 @@ export default function BACEffectsPage() {
 
       <div className="mt-8 flex flex-wrap gap-4 text-sm">
         <Link
+          href="/learn"
+          className="text-blue-400 hover:text-blue-300"
+        >
+          ← Back to Learn
+        </Link>
+        <Link
           href="/alcohol-metabolism"
           className="text-blue-400 hover:text-blue-300"
         >
-          How Your Body Processes Alcohol →
-        </Link>
-        <Link
-          href="/responsible-drinking"
-          className="text-blue-400 hover:text-blue-300"
-        >
-          Responsible Drinking Guide →
+          Alcohol Metabolism →
         </Link>
       </div>
     </div>

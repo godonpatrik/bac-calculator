@@ -530,22 +530,16 @@ export default function ResponsibleDrinkingPage() {
 
       <div className="mt-8 flex flex-wrap gap-4 text-sm">
         <Link
-          href="/bac-effects"
-          className="text-blue-400 hover:text-blue-300"
-        >
-          ← BAC Effects on the Body
-        </Link>
-        <Link
           href="/alcohol-metabolism"
           className="text-blue-400 hover:text-blue-300"
         >
-          How Your Body Processes Alcohol
+          ← Alcohol Metabolism
         </Link>
         <Link
-          href="/support"
+          href="/research"
           className="text-blue-400 hover:text-blue-300"
         >
-          Support Resources →
+          Scientific Research →
         </Link>
       </div>
     </div>

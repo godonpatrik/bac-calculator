@@ -368,6 +368,21 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
+
+      <div className="mt-8 flex flex-wrap gap-4 text-sm">
+        <Link
+          href="/responsible-drinking"
+          className="text-blue-400 hover:text-blue-300"
+        >
+          ← Responsible Drinking
+        </Link>
+        <Link
+          href="/alcohol-duration"
+          className="text-blue-400 hover:text-blue-300"
+        >
+          How Long Alcohol Stays in Your Body →
+        </Link>
+      </div>
     </div>
   );
 }
