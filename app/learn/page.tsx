@@ -124,7 +124,7 @@ const topics = [
   {
     title: "Alcohol vs Body Weight",
     href: "/alcohol-body-weight",
-    icon: "⚖️",
+    icon: "🧍",
     description:
       "Understand why body weight is one of the most important factors in BAC calculation. Learn how body composition, water content, and metabolism rate interact with alcohol.",
     highlights: [
@@ -263,18 +263,6 @@ export default function LearnPage() {
           Find Support Resources →
         </Link>
       </section>
-
-      <div className="mt-8 flex flex-wrap gap-4 text-sm">
-        <Link href="/" className="text-blue-400 hover:text-blue-300">
-          ← Back to Calculator
-        </Link>
-        <Link href="/faq" className="text-blue-400 hover:text-blue-300">
-          Frequently Asked Questions
-        </Link>
-        <Link href="/about" className="text-blue-400 hover:text-blue-300">
-          About BAC Calculator
-        </Link>
-      </div>
     </div>
   );
 }
