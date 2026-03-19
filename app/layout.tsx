@@ -108,9 +108,6 @@ export const metadata: Metadata = {
       "Calculate your blood alcohol content in real-time. Track drinks, estimate sobriety time, and view BAC charts.",
   },
   category: "health",
-  alternates: {
-    canonical: "https://alcoholtrackr.com",
-  },
 };
 
 export default function RootLayout({
@@ -126,7 +123,6 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="theme-color" content="#1f2937" />
-        <link rel="canonical" href="https://alcoholtrackr.com" />
         {/* Google Consent Mode v2 — deny all by default until user consents */}
         <Script id="consent-init" strategy="beforeInteractive">
           {`

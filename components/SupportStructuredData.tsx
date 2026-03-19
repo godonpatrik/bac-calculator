@@ -6,7 +6,7 @@ export default function SupportStructuredData() {
     description:
       "Find help for alcohol problems including crisis helplines, AA office finder, and addiction recovery resources worldwide.",
     url: "https://alcoholtrackr.com/support",
-    lastReviewed: new Date().toISOString().split("T")[0],
+    lastReviewed: "2026-03-19",
     specialty: "Addiction Medicine",
     about: {
       "@type": "MedicalCondition",
@@ -17,43 +17,6 @@ export default function SupportStructuredData() {
       "@type": "WebPageElement",
       cssSelector: "main",
     },
-  };
-
-  const specialAnnouncementSchema = {
-    "@context": "https://schema.org",
-    "@type": "SpecialAnnouncement",
-    name: "24/7 Alcohol Crisis Helplines Available",
-    text: "Free, confidential alcohol support helplines available 24/7 in multiple countries. Get immediate help for alcohol-related crises.",
-    url: "https://alcoholtrackr.com/support",
-    category: "https://www.wikidata.org/wiki/Q81068910", // Health
-    datePosted: new Date().toISOString(),
-    provider: [
-      {
-        "@type": "Organization",
-        name: "SAMHSA National Helpline",
-        telephone: "+1-800-662-4357",
-        areaServed: "US",
-        availableLanguage: ["English", "Spanish"],
-      },
-      {
-        "@type": "Organization",
-        name: "Drug Rehab Services Canada",
-        telephone: "+1-877-254-3348",
-        areaServed: "CA",
-      },
-      {
-        "@type": "Organization",
-        name: "Drinkline UK",
-        telephone: "+44-300-123-1110",
-        areaServed: "GB",
-      },
-      {
-        "@type": "Organization",
-        name: "National Alcohol Helpline Australia",
-        telephone: "+61-1800-250-015",
-        areaServed: "AU",
-      },
-    ],
   };
 
   const aaOrganizationSchema = {
@@ -142,12 +105,7 @@ export default function SupportStructuredData() {
           __html: JSON.stringify(medicalWebPageSchema),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(specialAnnouncementSchema),
-        }}
-      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

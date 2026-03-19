@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import BACTracker from "@/components/BACTracker";
 import AdUnit from "@/components/AdUnit";
 import { adConfig } from "@/utils/adConfig";
 import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://alcoholtrackr.com",
+  },
+};
 
 export default function Home() {
   return (
