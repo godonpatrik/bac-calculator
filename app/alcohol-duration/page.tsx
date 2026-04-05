@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "How Long Does Alcohol Stay in Your Body? — Detection Times & Elimination",
@@ -82,6 +84,13 @@ export default function AlcoholDurationPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         How Long Does Alcohol Stay in Your Body?
       </h1>
+      <ArticleMeta
+        slug="alcohol-duration"
+        title="How Long Does Alcohol Stay in Your Body? — Detection Times & Elimination"
+        description="Detection windows for alcohol in blood, breath, urine, saliva and hair; elimination rates; and the factors that change how quickly your body clears ethanol."
+        datePublished="2026-03-16"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         The time alcohol remains in your system depends on how much you drank,
         your metabolism, body composition, and the type of test used to detect
@@ -294,6 +303,35 @@ export default function AlcoholDurationPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "Jones, A. W. (2010). Evidence-based survey of the elimination rates of ethanol from blood with applications in forensic casework. Forensic Science International, 200(1–3), 1–20.",
+            url: "https://doi.org/10.1016/j.forsciint.2010.02.021",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Helander, A., Böttcher, M., Fehr, C., Dahmen, N., & Beck, O. (2009). Detection times for urinary ethyl glucuronide and ethyl sulfate in heavy drinkers during alcohol detoxification. Alcohol and Alcoholism, 44(1), 55–61.",
+            url: "https://doi.org/10.1093/alcalc/agn084",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Substance Abuse and Mental Health Services Administration (SAMHSA). The Role of Biomarkers in the Treatment of Alcohol Use Disorders, 2012 Revision.",
+            url: "https://store.samhsa.gov/product/the-role-of-biomarkers-in-the-treatment-of-alcohol-use-disorders-2012-revision/sma12-4686",
+            label: "SAMHSA",
+          },
+          {
+            citation:
+              "National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol and the Human Body.",
+            url: "https://www.niaaa.nih.gov/alcohols-effects-health/alcohols-effects-body",
+            label: "NIAAA",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

@@ -64,6 +64,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/editorial-policy" className="text-gray-400 hover:text-white transition-colors">
+                  Editorial Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/methodology" className="text-gray-400 hover:text-white transition-colors">
+                  Methodology
+                </Link>
+              </li>
+              <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">
                   BAC Calculator
                 </Link>

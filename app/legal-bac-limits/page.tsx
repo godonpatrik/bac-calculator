@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Legal BAC Limits by Country — Drink-Driving Laws Worldwide",
@@ -101,6 +103,13 @@ export default function LegalBACLimitsPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         Legal BAC Limits by Country
       </h1>
+      <ArticleMeta
+        slug="legal-bac-limits"
+        title="Legal BAC Limits by Country — Drink-Driving Laws Worldwide"
+        description="Comparison of blood alcohol content driving limits across 40+ countries, including zero-tolerance laws and stricter rules for commercial and novice drivers."
+        datePublished="2026-03-16"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         Drink-driving laws vary significantly around the world. While 0.08% BAC
         is the legal limit in several countries, many nations have adopted
@@ -216,6 +225,35 @@ export default function LegalBACLimitsPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "World Health Organization (WHO). Global Status Report on Road Safety 2023 — drink-driving section.",
+            url: "https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/global-status-report-on-road-safety-2023",
+            label: "WHO",
+          },
+          {
+            citation:
+              "European Transport Safety Council (ETSC). Drink Driving Monitor — country data and BAC limits.",
+            url: "https://etsc.eu/tag/drink-driving/",
+            label: "ETSC",
+          },
+          {
+            citation:
+              "Governors Highway Safety Association (GHSA). Alcohol Impaired Driving — state BAC laws (U.S.).",
+            url: "https://www.ghsa.org/state-laws/issues/alcohol-impaired-driving",
+            label: "GHSA",
+          },
+          {
+            citation:
+              "Fell, J. C., & Scherer, M. (2017). Estimation of the potential effectiveness of lowering the BAC illegal per se limit to .05 g/dL in the United States. Traffic Injury Prevention, 18(8), 785–791.",
+            url: "https://doi.org/10.1080/15389588.2017.1336231",
+            label: "DOI",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

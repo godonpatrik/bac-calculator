@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
       <Breadcrumbs items={breadcrumbItems} />
 
       <h1 className="text-3xl font-bold text-white mb-2">Privacy Policy</h1>
-      <p className="text-gray-400 text-sm mb-8">Last updated: Feb 23, 2026</p>
+      <p className="text-gray-400 text-sm mb-8">Last updated: Apr 05, 2026</p>
 
       <div className="space-y-6 text-gray-300 text-sm leading-relaxed">
         <section>

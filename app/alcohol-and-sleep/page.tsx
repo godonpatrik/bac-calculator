@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Alcohol and Sleep — How Drinking Affects Your Sleep Quality",
@@ -44,6 +46,13 @@ export default function AlcoholAndSleepPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         Alcohol and Sleep
       </h1>
+      <ArticleMeta
+        slug="alcohol-and-sleep"
+        title="Alcohol and Sleep — How Drinking Affects Sleep Quality"
+        description="The evidence on how alcohol alters sleep architecture: REM suppression, second-half sleep fragmentation, sleep-apnea effects, and next-day fatigue."
+        datePublished="2026-03-16"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         Many people use alcohol as a sleep aid, but the reality is more
         complex. While alcohol can help you fall asleep faster, it
@@ -323,6 +332,35 @@ export default function AlcoholAndSleepPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "Ebrahim, I. O., Shapiro, C. M., Williams, A. J., & Fenwick, P. B. (2013). Alcohol and sleep I: effects on normal sleep. Alcoholism: Clinical and Experimental Research, 37(4), 539–549.",
+            url: "https://doi.org/10.1111/acer.12006",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Roehrs, T., & Roth, T. (2001). Sleep, sleepiness, and alcohol use. Alcohol Research & Health, 25(2), 101–109.",
+            url: "https://pubs.niaaa.nih.gov/publications/arh25-2/101-109.htm",
+            label: "NIAAA",
+          },
+          {
+            citation:
+              "Simou, E., Britton, J., & Leonardi-Bee, J. (2018). Alcohol and the risk of sleep apnoea: a systematic review and meta-analysis. Sleep Medicine, 42, 38–46.",
+            url: "https://doi.org/10.1016/j.sleep.2017.12.005",
+            label: "DOI",
+          },
+          {
+            citation:
+              "National Sleep Foundation. How Alcohol Affects the Quality — and Quantity — of Sleep.",
+            url: "https://www.thensf.org/how-alcohol-affects-sleep/",
+            label: "NSF",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

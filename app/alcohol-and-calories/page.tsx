@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Alcohol and Calories — How Drinking Affects Your Diet & Weight",
@@ -76,6 +78,13 @@ export default function AlcoholAndCaloriesPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         Alcohol and Calories
       </h1>
+      <ArticleMeta
+        slug="alcohol-and-calories"
+        title="Alcohol and Calories — How Drinking Affects Your Diet and Weight"
+        description="How many calories are in popular drinks, why alcohol calories are 'empty', and how ethanol affects metabolism, appetite, and weight management."
+        datePublished="2026-03-16"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         Alcohol is often an overlooked source of calories. At 7 calories per
         gram, ethanol is the second most energy-dense macronutrient after fat
@@ -345,6 +354,35 @@ export default function AlcoholAndCaloriesPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "U.S. Department of Agriculture. FoodData Central — Alcoholic Beverage Entries.",
+            url: "https://fdc.nal.usda.gov/",
+            label: "USDA",
+          },
+          {
+            citation:
+              "Suter, P. M., Schutz, Y., & Jequier, E. (1992). The effect of ethanol on fat storage in healthy subjects. New England Journal of Medicine, 326(15), 983–987.",
+            url: "https://doi.org/10.1056/NEJM199204093261503",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Sayon-Orea, C., Martinez-Gonzalez, M. A., & Bes-Rastrollo, M. (2011). Alcohol consumption and body weight: a systematic review. Nutrition Reviews, 69(8), 419–431.",
+            url: "https://doi.org/10.1111/j.1753-4887.2011.00403.x",
+            label: "DOI",
+          },
+          {
+            citation:
+              "National Institute on Alcohol Abuse and Alcoholism (NIAAA). Rethinking Drinking — What Counts as a Drink.",
+            url: "https://www.rethinkingdrinking.niaaa.nih.gov/How-much-is-too-much/What-counts-as-a-drink/Whats-A-Standard-Drink.aspx",
+            label: "NIAAA",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

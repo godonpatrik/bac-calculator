@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import BACTracker from "@/components/BACTracker";
-import AdUnit from "@/components/AdUnit";
-import { adConfig } from "@/utils/adConfig";
 import StructuredData from "@/components/StructuredData";
 import Link from "next/link";
 
@@ -16,60 +14,57 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900">
       <StructuredData />
 
-      {/* 3-column layout: left ad | main content | right ad */}
-      <div className="flex justify-center gap-4"> 
-        <aside
-          className="hidden lg:block w-[160px] shrink-0"
-          aria-label="Advertisement"
-        >
-          <div className="sticky top-4 pt-6 h-fit">
-            <AdUnit
-              slot={adConfig.slots.leftSide}
-              client={adConfig.client}
-              format="vertical"
-              responsive={false}
-              className="w-[160px] min-h-[600px]"
-            />
-         </div>
-        </aside>
-
+      <div className="flex justify-center">
         <main className="max-w-4xl w-full px-4 py-6 min-w-0">
           <header className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-white mb-2">
-              Blood Alcohol Calculator
+            <h1 className="text-3xl font-bold text-white mb-3">
+              Blood Alcohol Content (BAC) Calculator
             </h1>
-            <p className="text-gray-300 text-sm max-w-2xl mx-auto">
-              Calculate your estimated blood alcohol content (BAC) in real-time.
-              Add your drinks, track your BAC level over time, and find out when
-              you&apos;ll be sober. Free, private, and based on the Widmark
-              formula. Need help? Find{" "}
-              <Link
-                href="/support"
-                className="text-blue-400 hover:text-blue-300 underline font-medium"
-              >
-                AA meetings and alcohol support resources
-              </Link>
-              .
+            <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
+              A free, privacy-first tool that estimates your blood alcohol
+              content using the scientifically validated Widmark formula. Add
+              your drinks, see your BAC rise and fall in real time, and get an
+              evidence-based estimate of when your body will return to 0.00%.
             </p>
           </header>
 
-          {/* Top Banner Ad */}
-          {/* <AdUnit
-            slot={adConfig.slots.banner}
-            client={adConfig.client}
-            format="horizontal"
-            className="mb-6"
-          /> */}
+          {/* Introductory editorial content (above the calculator) */}
+          <section className="bg-gray-800 rounded-lg p-6 mb-6">
+            <h2 className="text-xl font-semibold text-white mb-3">
+              What This BAC Calculator Does
+            </h2>
+            <div className="text-gray-300 text-sm space-y-3 leading-relaxed">
+              <p>
+                Blood Alcohol Content (BAC) is the percentage of alcohol in
+                your bloodstream — the same measurement used by police
+                breathalyzers and legal BAC limits worldwide. A BAC of 0.08%
+                means there are 0.08 grams of ethanol per 100 milliliters of
+                blood. Our calculator estimates this value using{" "}
+                <strong>
+                  the Widmark equation, published by Swedish scientist Erik
+                  Widmark in 1932
+                </strong>{" "}
+                and still used today by forensic toxicologists and clinical
+                researchers.
+              </p>
+              <p>
+                Enter your body weight, biological sex, and each drink you
+                consume (with a timestamp), and the calculator will compute
+                your rising and falling BAC on a live chart. It also estimates
+                when your BAC will reach 0.00% based on the average ethanol
+                elimination rate of roughly 0.015% per hour that has been
+                established across decades of controlled pharmacokinetic
+                studies.
+              </p>
+              <p>
+                <strong>Everything runs in your browser.</strong> Your weight,
+                sex, and drink log never leave your device — we do not send
+                this data to any server, and no account is required.
+              </p>
+            </div>
+          </section>
 
           <BACTracker />
-
-          {/* Middle Content Ad */}
-          {/* <AdUnit
-            slot={adConfig.slots.content}
-            client={adConfig.client}
-            format="horizontal"
-            className="my-6"
-          /> */}
 
           <footer className="mt-8 text-center">
 
@@ -219,31 +214,8 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Bottom Ad */}
-            {/* <AdUnit
-              slot={adConfig.slots.footer}
-              client={adConfig.client}
-              format="horizontal"
-              className="mt-4"
-            /> */}
           </footer>
         </main>
-
-        {/* Right Sidebar Ad — visible on large screens, sticky while scrolling */}
-        <aside
-          className="hidden lg:block w-[160px] shrink-0"
-          aria-label="Advertisement"
-        >
-          <div className="sticky top-4 pt-6 h-fit">
-            <AdUnit
-              slot={adConfig.slots.rightSide}
-              client={adConfig.client}
-              format="vertical"
-              responsive={false}
-              className="w-[160px] min-h-[600px]"
-            />
-          </div>
-        </aside>
       </div>
     </div>
   );

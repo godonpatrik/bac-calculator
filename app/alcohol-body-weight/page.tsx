@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Alcohol vs Body Weight — How Weight Affects Your BAC",
@@ -54,6 +56,13 @@ export default function AlcoholBodyWeightPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         Alcohol vs Body Weight
       </h1>
+      <ArticleMeta
+        slug="alcohol-body-weight"
+        title="Alcohol vs Body Weight — How Weight Affects Your BAC"
+        description="Why body weight and composition are dominant factors in BAC estimation, how the Widmark factor models body-water content, and how BAC differs by weight."
+        datePublished="2026-03-16"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         Body weight is one of the most significant factors determining your
         blood alcohol content (BAC) after drinking. But it&apos;s not just about
@@ -326,6 +335,35 @@ export default function AlcoholBodyWeightPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "Watson, P. E., Watson, I. D., & Batt, R. D. (1981). Prediction of blood alcohol concentrations in human subjects: updating the Widmark equation. Journal of Studies on Alcohol, 42(7), 547–556.",
+            url: "https://doi.org/10.15288/jsa.1981.42.547",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Forrest, A. R. (1986). The estimation of Widmark's factor. Journal of the Forensic Science Society, 26(4), 249–252.",
+            url: "https://doi.org/10.1016/S0015-7368(86)72491-6",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Seidl, S., Jensen, U., & Alt, A. (2000). The calculation of blood ethanol concentrations in males and females. International Journal of Legal Medicine, 114(1–2), 71–77.",
+            url: "https://doi.org/10.1007/s004140000154",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Frezza, M., et al. (1990). High blood alcohol levels in women: the role of decreased gastric alcohol dehydrogenase activity and first-pass metabolism. NEJM, 322(2), 95–99.",
+            url: "https://doi.org/10.1056/NEJM199001113220205",
+            label: "DOI",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

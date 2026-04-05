@@ -211,6 +211,105 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
+
+        <section className="bg-gray-800 rounded-lg p-6">
+          <h2 className="text-xl font-semibold text-white mb-3">
+            Who Writes the Content
+          </h2>
+          <div className="text-gray-300 text-sm space-y-2">
+            <p>
+              All articles on this site are produced by the{" "}
+              <strong>BAC Calculator Editorial Team</strong> — a small group of
+              writers and editors with backgrounds in health communication,
+              science journalism, and safety education. Every long-form
+              article is built from peer-reviewed research and guidance
+              published by national and international health authorities
+              (NIAAA, CDC, NHTSA, WHO, NHS, EMCDDA and others).
+            </p>
+            <p>
+              Each article goes through a structured research, drafting,
+              fact-check and readability review before publication, and is
+              re-reviewed at least once every twelve months. You can read the
+              full workflow, our sourcing standards, and our corrections policy
+              on the{" "}
+              <Link
+                href="/editorial-policy"
+                className="text-blue-400 hover:text-blue-300 underline"
+              >
+                Editorial Policy
+              </Link>{" "}
+              page.
+            </p>
+            <p>
+              We do not publish sponsored content, accept affiliate deals from
+              alcohol producers or rehab centres, or adjust editorial
+              decisions based on advertising relationships.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-gray-800 rounded-lg p-6">
+          <h2 className="text-xl font-semibold text-white mb-3">
+            How the Calculator Works Under the Hood
+          </h2>
+          <div className="text-gray-300 text-sm space-y-2">
+            <p>
+              The calculator implements the Widmark pharmacokinetic equation
+              — the same model used in forensic toxicology worldwide — using
+              the 0.015% per-hour ethanol elimination rate established by
+              Jones (2010) from thousands of controlled subjects, and the
+              body-water distribution factors (0.68 for men, 0.55 for women)
+              from the original Widmark (1932) monograph and subsequent
+              literature.
+            </p>
+            <p>
+              A full list of the constants we use, the assumptions the model
+              makes, and its known limitations lives on the{" "}
+              <Link
+                href="/methodology"
+                className="text-blue-400 hover:text-blue-300 underline"
+              >
+                Methodology
+              </Link>{" "}
+              page. The peer-reviewed papers that back each constant are
+              catalogued on the{" "}
+              <Link
+                href="/research"
+                className="text-blue-400 hover:text-blue-300 underline"
+              >
+                Research
+              </Link>{" "}
+              page.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-gray-800 rounded-lg p-6">
+          <h2 className="text-xl font-semibold text-white mb-3">
+            Who This Site Is For
+          </h2>
+          <div className="text-gray-300 text-sm space-y-2">
+            <p>
+              This site is written for adults of legal drinking age who want
+              accurate, plain-language information about blood alcohol
+              content, alcohol metabolism, and the health and legal
+              consequences of drinking. We assume readers are making their
+              own informed choices and want the evidence to guide them.
+            </p>
+            <p>
+              If you are concerned about your own or someone else&apos;s
+              drinking, please visit our{" "}
+              <Link
+                href="/support"
+                className="text-blue-400 hover:text-blue-300 underline"
+              >
+                Support &amp; Resources
+              </Link>{" "}
+              page for helplines, treatment locators, and peer-support
+              organisations.
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );

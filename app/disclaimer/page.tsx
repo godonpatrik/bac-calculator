@@ -42,7 +42,7 @@ export default function DisclaimerPage() {
 
       <h1 className="text-3xl font-bold text-white mb-2">Disclaimer</h1>
       <p className="text-gray-400 text-sm mb-8">
-        Last updated: February 23, 2026
+        Last updated: Apr 05,, 2026
       </p>
 
       <div className="space-y-6 text-gray-300 text-sm leading-relaxed">

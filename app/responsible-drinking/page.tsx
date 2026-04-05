@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Responsible Drinking — Safety Tips & Harm Reduction Guide",
@@ -44,6 +46,13 @@ export default function ResponsibleDrinkingPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         Responsible Drinking Guide
       </h1>
+      <ArticleMeta
+        slug="responsible-drinking"
+        title="Responsible Drinking Guide — Safety Tips & Harm Reduction"
+        description="Low-risk drinking guidelines, harm reduction strategies before, during and after drinking, recognising alcohol poisoning, and when to seek help."
+        datePublished="2026-03-13"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         If you choose to drink, understanding how to do so more safely can
         reduce the risk of harm to yourself and others. This guide provides
@@ -514,6 +523,41 @@ export default function ResponsibleDrinkingPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "U.S. Department of Health and Human Services and U.S. Department of Agriculture. 2020–2025 Dietary Guidelines for Americans (alcoholic beverages chapter).",
+            url: "https://www.dietaryguidelines.gov/",
+            label: "DietaryGuidelines.gov",
+          },
+          {
+            citation:
+              "Canadian Centre on Substance Use and Addiction (CCSA). Canada's Guidance on Alcohol and Health: Final Report (2023).",
+            url: "https://www.ccsa.ca/canadas-guidance-alcohol-and-health",
+            label: "CCSA",
+          },
+          {
+            citation:
+              "UK Chief Medical Officers' Low Risk Drinking Guidelines (2016).",
+            url: "https://www.gov.uk/government/publications/alcohol-consumption-advice-on-low-risk-drinking",
+            label: "UK CMO",
+          },
+          {
+            citation:
+              "National Health and Medical Research Council (NHMRC), Australia. Australian Guidelines to Reduce Health Risks from Drinking Alcohol (2020).",
+            url: "https://www.nhmrc.gov.au/health-advice/alcohol",
+            label: "NHMRC",
+          },
+          {
+            citation:
+              "World Health Organization (WHO). No level of alcohol consumption is safe for our health (2023).",
+            url: "https://www.who.int/europe/news/item/04-01-2023-no-level-of-alcohol-consumption-is-safe-for-our-health",
+            label: "WHO",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

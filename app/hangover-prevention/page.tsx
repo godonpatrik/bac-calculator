@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Hangover Prevention Tips — Science-Based Strategies",
@@ -44,6 +46,13 @@ export default function HangoverPreventionPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         Hangover Prevention Tips
       </h1>
+      <ArticleMeta
+        slug="hangover-prevention"
+        title="Hangover Prevention Tips — Science-Based Strategies"
+        description="What actually causes hangovers, which prevention strategies the evidence supports, and which popular remedies are myths."
+        datePublished="2026-03-16"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         Hangovers are your body&apos;s reaction to drinking too much alcohol.
         While the only guaranteed way to avoid a hangover is to not drink, there
@@ -351,6 +360,35 @@ export default function HangoverPreventionPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "Penning, R., van Nuland, M., Fliervoet, L. A. L., Olivier, B., & Verster, J. C. (2010). The pathology of alcohol hangover. Current Drug Abuse Reviews, 3(2), 68–75.",
+            url: "https://doi.org/10.2174/1874473711003020068",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Rohsenow, D. J., Howland, J., Arnedt, J. T., et al. (2010). Intoxication with bourbon versus vodka: effects on hangover, sleep, and next-day neurocognitive performance. Alcoholism: Clinical and Experimental Research, 34(3), 509–518.",
+            url: "https://doi.org/10.1111/j.1530-0277.2009.01116.x",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Pittler, M. H., Verster, J. C., & Ernst, E. (2005). Interventions for preventing or treating alcohol hangover: systematic review of randomised controlled trials. BMJ, 331(7531), 1515–1518.",
+            url: "https://doi.org/10.1136/bmj.331.7531.1515",
+            label: "DOI",
+          },
+          {
+            citation:
+              "National Institute on Alcohol Abuse and Alcoholism (NIAAA). Hangovers.",
+            url: "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/hangovers",
+            label: "NIAAA",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

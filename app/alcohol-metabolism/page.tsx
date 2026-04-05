@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "Alcohol Metabolism — How Your Body Processes Alcohol",
@@ -44,6 +46,13 @@ export default function AlcoholMetabolismPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         How Your Body Processes Alcohol
       </h1>
+      <ArticleMeta
+        slug="alcohol-metabolism"
+        title="How Your Body Processes Alcohol — Absorption, Distribution, Metabolism, Elimination"
+        description="The pharmacokinetics of ethanol: how alcohol is absorbed, distributed through body water, metabolised in the liver via ADH/ALDH and MEOS, and eliminated at a roughly constant rate."
+        datePublished="2026-03-13"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         When you drink alcohol, your body begins a complex process of
         absorption, distribution, metabolism, and elimination. Understanding
@@ -373,6 +382,41 @@ export default function AlcoholMetabolismPage() {
           </div>
         </section>
       </div>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "Cederbaum, A. I. (2012). Alcohol metabolism. Clinics in Liver Disease, 16(4), 667–685.",
+            url: "https://doi.org/10.1016/j.cld.2012.08.002",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Jones, A. W. (2010). Evidence-based survey of the elimination rates of ethanol from blood with applications in forensic casework. Forensic Science International, 200(1–3), 1–20.",
+            url: "https://doi.org/10.1016/j.forsciint.2010.02.021",
+            label: "DOI",
+          },
+          {
+            citation:
+              "Frezza, M., et al. (1990). High blood alcohol levels in women: the role of decreased gastric alcohol dehydrogenase activity and first-pass metabolism. New England Journal of Medicine, 322(2), 95–99.",
+            url: "https://doi.org/10.1056/NEJM199001113220205",
+            label: "DOI",
+          },
+          {
+            citation:
+              "National Institute on Alcohol Abuse and Alcoholism (NIAAA). Alcohol Metabolism: An Update.",
+            url: "https://pubs.niaaa.nih.gov/publications/aa72/aa72.htm",
+            label: "NIAAA",
+          },
+          {
+            citation:
+              "Widmark, E. M. P. (1932). Die theoretischen Grundlagen und die praktische Verwendbarkeit der gerichtlich-medizinischen Alkoholbestimmung. Urban & Schwarzenberg, Berlin.",
+            url: "https://alcoholtrackr.com/research#pharmacokinetics-metabolism",
+            label: "Reference",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">

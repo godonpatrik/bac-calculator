@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs, { generateBreadcrumbSchema } from "@/components/Breadcrumbs";
+import ArticleMeta from "@/components/ArticleMeta";
+import ArticleReferences from "@/components/ArticleReferences";
 
 export const metadata: Metadata = {
   title: "BAC Effects — How Blood Alcohol Levels Affect Your Body",
@@ -155,6 +157,13 @@ export default function BACEffectsPage() {
       <h1 className="text-3xl font-bold text-white mb-3">
         How BAC Levels Affect Your Body
       </h1>
+      <ArticleMeta
+        slug="bac-effects"
+        title="How BAC Levels Affect Your Body — Stage-by-Stage Impairment Guide"
+        description="A stage-by-stage guide to what happens at each blood alcohol content level, from 0.01% through 0.35%+, including cognitive, motor, and safety effects."
+        datePublished="2026-03-13"
+        dateModified="2026-04-05"
+      />
       <p className="text-gray-400 text-sm mb-8">
         Blood Alcohol Content (BAC) measures the percentage of alcohol in your
         bloodstream. Even small amounts of alcohol can affect your body and
@@ -252,6 +261,35 @@ export default function BACEffectsPage() {
           </ul>
         </div>
       </section>
+
+      <ArticleReferences
+        references={[
+          {
+            citation:
+              "National Highway Traffic Safety Administration (NHTSA). The ABCs of BAC: A Guide to Estimating Blood Alcohol Concentration.",
+            url: "https://www.nhtsa.gov/book/countermeasures/countermeasures-work/alcohol-and-drug-impaired-driving",
+            label: "NHTSA",
+          },
+          {
+            citation:
+              "Centers for Disease Control and Prevention (CDC). Impaired Driving: Get the Facts.",
+            url: "https://www.cdc.gov/transportation-safety/impaired-driving/index.html",
+            label: "CDC",
+          },
+          {
+            citation:
+              "Mitchell, M. C. (1985). Alcohol-induced impairment of central nervous system function: behavioral skills involved in driving. Journal of Studies on Alcohol, Supplement, 10, 109–116.",
+            url: "https://doi.org/10.15288/jsas.1985.s10.109",
+            label: "DOI",
+          },
+          {
+            citation:
+              "National Institute on Alcohol Abuse and Alcoholism (NIAAA). Understanding the Dangers of Alcohol Overdose.",
+            url: "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-dangers-of-alcohol-overdose",
+            label: "NIAAA",
+          },
+        ]}
+      />
 
       <section className="bg-amber-900/30 border border-amber-700 rounded-lg p-6 mt-6">
         <h2 className="text-lg font-semibold text-amber-400 mb-2">
